@@ -14,7 +14,7 @@ VALUES
 	('bon iver'),
 	('simon&garfunkel'),
 	('frank ocean'),
-	('beyonce')
+	('beyonce');
 
 	
 INSERT INTO genres(genre_name)
@@ -23,7 +23,7 @@ VALUES
 	('pop'),
 	('rock'),
 	('folk'),
-	('rnb')
+	('rnb');
 
 
 INSERT INTO genresartists(genre_id, artist_id)
@@ -42,7 +42,7 @@ VALUES
 	(4, 12),
 	(4, 13),
 	(5, 14),
-	(5, 15)
+	(5, 15);
 
 
 
@@ -53,19 +53,16 @@ VALUES
 	('the new sounds', '1951-05-12'),
 	('meddle', '1971-03-30'),
 	('a night at the opera', '1974-04-13'),
-	('back to the light', '1992-07-02')
---ON CONFLICT (album_name) DO NOTHING
-
-
-
+	('back to the light', '1992-07-02');
+	
 INSERT INTO tracks(track_name, track_duration, album_id)
 VALUES 
-	('echoes', '23:29', 4),
-	('san tropes', '3:43', 4),
-	('''39', '3:31', 5), -- экранирование апострофа
-	('Bohemian Rhapsody', '5:55', 5),
-	('the dark', '2:22', 6),
-	('static', '2:36', 1)
+	('echoes', '00:23:29', 4),
+	('san tropes', '00:03:43', 4),
+	('''39', '00:03:31', 5), -- экранирование апострофа
+	('Bohemian Rhapsody', '00:05:55', 5),
+	('the dark', '00:02:22', 6),
+	('static', '00:02:36', 1);
 	
 INSERT INTO albumsartists(album_id, artist_id)
 VALUES
@@ -74,14 +71,14 @@ VALUES
 	(3, 3),
 	(4, 7),
 	(5, 8),
-	(6, 9)
+	(6, 9);
 	
 INSERT INTO collections(collection_name, collection_date)
 VALUES 
 	('the best rock', '1990-01-01'),
 	('the best jazz', '2000-01-01'),
 	('the best pop', '2022-01-01'),
-	('the best folk', '1976-01-01')
+	('the best folk', '1976-01-01');
 	
 INSERT INTO collectionstracks(collection_id, track_id)
 VALUES 
@@ -90,5 +87,4 @@ VALUES
 	(1, 3),
 	(1, 4),
 	(3, 5),
-	(2, 6)
-	
+	(2, 6);
