@@ -2,8 +2,8 @@ import sqlalchemy
 from sqlalchemy.orm import sessionmaker
 from orm_python_models import create_tables, Client, Telephone
 
-DCN = 'postgresql://postgres:jNdL_2269@localhost:5432/homework'
-engine = sqlalchemy.create_engine(DCN)
+DSN = 'postgresql://postgres:jNdL_2269@localhost:5432/homework'
+engine = sqlalchemy.create_engine(DSN)
 
 create_tables(engine)
 
@@ -49,8 +49,8 @@ session.commit()
 
 # обновление данных
 session.query(Client).filter(Client.last_name == 'Чернявин').update({'last_name': 'Черняев'})
-session.query(Telephone).filter(Telephone.client_id == 2).delete()
-session.query(Client).filter(Client.first_name == 'Сергей').delete()
+# session.query(Telephone).filter(Telephone.client_id == 2).delete()
+# session.query(Client).filter(Client.first_name == 'Сергей').delete()
 session.commit()
 
 session.close()
